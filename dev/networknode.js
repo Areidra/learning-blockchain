@@ -227,6 +227,10 @@ app.get('/consensus', function(req, res) {
 
   });
 
+  app.get('/block-explorer', function(req, res){
+    res.sendFile('./block-explorer/index.html', { root: __dirname })
+  });
+
 
 
   app.listen(port, function() {
